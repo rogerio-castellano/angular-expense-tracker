@@ -4,7 +4,10 @@
   </header>
   <app-expense-form></app-expense-form>
   <app-expense-filter></app-expense-filter>
+  @if(expenses.length > 0)
+  {
   <app-expense-list [expenses]="expenses"></app-expense-list>
+  }
 
 </main>
 
