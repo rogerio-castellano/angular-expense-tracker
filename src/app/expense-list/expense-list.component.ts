@@ -9,4 +9,8 @@ import Expense from '../models/Expense.model';
 })
 export class ExpenseListComponent {
   @Input({ required: true }) expenses: Expense[] = [];
+
+  get totalExpenses(): number {
+    return this.expenses.reduce((acc, expense) => acc + expense.amount, 0);
+  }
 }
